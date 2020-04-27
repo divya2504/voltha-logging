@@ -1,0 +1,14 @@
+** Log aggregation for voltha **
+
+This chart runs the following services:
+
+- Elasticsearch
+- Kibana
+- fluentd-elasticsearch (container logs from k8s)
+
+
+To access Kibana, go to:
+
+kubectl port-forward --address 0.0.0.0  service/logging-kibana <exposed-port>:443 -n voltha &
+
+Visit: http://<k8s_node_hostname>:30601
